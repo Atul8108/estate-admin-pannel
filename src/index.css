@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Noto+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+*{
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+  --primary-color: #475BE8;
+  --white-color: #FCFCFC;
+  --secondary-color:#DADEFA;
+  --text-primary-color: #11142D;
+  --second-text-color: #808191;
+  --bg-color:#F4F4F4;
+  --grey: #E4D8EF;
+  --divider-color:#E4E4E4;
+  --secondary-color: #CFC8FF;
+  --hover-color:#F7F7F7;
+  --bg-color-dark:#111315;
+  --black-color:#1A1D1F;
+  --text-color-dark: #EFEFEF;
+  --second-color-dark: #6F767E;
+  --divider-color-dark: #272B30;
+  --secondary-color-three: #FE6D8E;
+  --secondary-color-one:#FD8539;
+  --secondary-color-two:#2ed840;
 }

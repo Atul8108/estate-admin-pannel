@@ -1,0 +1,29 @@
+.side-menu-bar {
+    min-height: 100vh;
+    width: 270px;
+    background-color: var(--white-color);
+}
+.logo {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-menu-bar  .menu-items {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid;
+    height: 250px;
+}
+
+.menu-items ul{
+    list-style-type: none;
+
+}
+.menu-items li>a{
+    text-decoration: none;
+    color: var(--second-text-color);
+
+}

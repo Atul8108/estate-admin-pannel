@@ -1,0 +1,18 @@
+.page-inside-content{
+    background-color: var(--white-color);
+}
+
+.content{
+    height: 100%;
+}
+.property-card-container{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+}
+.property-card{
+    height: 85px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid black;
+}

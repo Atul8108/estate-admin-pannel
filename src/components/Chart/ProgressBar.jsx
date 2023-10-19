@@ -1,11 +1,11 @@
 import React from 'react'
-import Chart from 'react-apexcharts'
-
 
 const ProgressBar = () => {
     return (
         <>
+            <div className='Property-Referrals-container'>
 
+            </div>
         </>
     )
 }

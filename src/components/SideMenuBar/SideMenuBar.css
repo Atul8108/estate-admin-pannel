@@ -1,5 +1,6 @@
 .side-menu-bar {
     min-height: 100vh;
+    min-width: 270px;
     width: 270px;
     background-color: var(--white-color);
   }

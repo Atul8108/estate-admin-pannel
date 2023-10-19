@@ -47,7 +47,7 @@ const SignIn = () => {
               <p
                 style={{ marginTop: "30px", color: "var(--second-text-color)" }}
               >
-                Don’t have an account?<Link to="/sign-up">Sign up</Link>{" "}
+                Don’t have an account?<Link to="/">Sign up</Link>{" "}
               </p>
             </div>
           </div>

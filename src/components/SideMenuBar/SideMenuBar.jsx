@@ -19,8 +19,6 @@ const SideMenuBar = () => {
           </div>
           <nav className="menu-items">
             <NavLink
-<<<<<<< HEAD
-              eventKey="1"
               to="/dashboard"
               className="nav_item"
               style={({ isActive }) => ({
@@ -30,19 +28,11 @@ const SideMenuBar = () => {
                 color: isActive
                   ? "var(--white-color)"
                   : "var(--second-text-color)",
-=======
-              to="/dashboard"
-              className="nav_item"
-              style={({ isActive }) => ({
-                backgroundColor: isActive ? "var(--primary-color)" : "white",
-                color: "white",
->>>>>>> edfba8d72f942248f6a70728806aae04cd32f987
               })}
             >
-              <RxDashboard />
+              <RxDashboard  />
               &nbsp;Dashboard
             </NavLink>
-<<<<<<< HEAD
             <NavLink
               to="/property"
               className="nav_item"
@@ -115,26 +105,7 @@ const SideMenuBar = () => {
                   : "var(--second-text-color)",
               })}
             >
-=======
-            <NavLink to="/property" className="nav_item">
-              <PiBuildingsBold />
-              &nbsp;Property
-            </NavLink>
-            <NavLink to="/agent" className="nav_item">
-              <MdOutlinePeople />
-              &nbsp;Agent
-            </NavLink>
-            <NavLink to="/review" className="nav_item">
-              <AiOutlineStar />
-              &nbsp;Review
-            </NavLink>
-            <NavLink to="/message" className="nav_item">
-              <BiMessageDetail />
-              &nbsp;Message
-            </NavLink>
-            <NavLink to="/profile" className="nav_item">
->>>>>>> edfba8d72f942248f6a70728806aae04cd32f987
-              <CgProfile />
+              <CgProfile/>
               &nbsp;My Profile
             </NavLink>
           </nav>

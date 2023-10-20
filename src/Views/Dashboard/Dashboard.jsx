@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header'
 import "./Dashboard.css"
 import ColumnChart from '../../components/Chart/ColumnChart'
 import ProgressBar from '../../components/Chart/ProgressBar'
+import LineProgress from '../../components/Chart/LineProgress'
 
 const Dashboard = () => {
     return (
@@ -10,35 +11,60 @@ const Dashboard = () => {
             <section className="main-layout">
                 <Header />
                 <div className='page-content'>
-                    <div className='row'>
-                        <h4>Dashboard</h4>
-                    <div className='col property-card-container'>
-                        <div className='property-card'>
-                            <p>Total Customer</p>
-                            <p>000</p>
-                            <ProgressBar />
+                    <div className='container property-card-container'>
+                        <h4 className='mr-4 m-0'>Dashboard</h4>
+                        <div className="row row-style">
+                            <div className="col-sm-3">
+                                <div className="property-card">
+                                    <div className="property-card-info">
+                                        <p>Total Customer</p>
+                                        <p>000</p>
+                                    </div>
+                                    <div className="property-card-progressBar">
+                                        <ProgressBar />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="property-card">
+                                    <div className="property-card-info">
+                                        <p>Total Customer</p>
+                                        <p>000</p>
+                                    </div>
+                                    <div className="property-card-progressBar">
+                                        <ProgressBar />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="property-card">
+                                    <div className="property-card-info">
+                                        <p>Total Customer</p>
+                                        <p>000</p>
+                                    </div>
+                                    <div className="property-card-progressBar">
+                                        <ProgressBar />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="property-card">
+                                    <div className="property-card-info">
+                                        <p>Total Customer</p>
+                                        <p>000</p>
+                                    </div>
+                                    <div className="property-card-progressBar">
+                                        <ProgressBar />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className='col property-card'>
-                            <p>Total Customer</p>
-                            <p>000</p>
-                            <ProgressBar />
+                        <div className='bar-chart'>
+                            <ColumnChart />
                         </div>
-                        <div className='col property-card'>
-                            <p>Total Customer</p>
-                            <p>000</p>
-                            <ProgressBar />
+                        <div>
+                            <LineProgress />
                         </div>
-                        <div className='col property-card'>
-                            <p>Total Customer</p>
-                            <p>000</p>
-                            <ProgressBar />
-                        </div>
-                    </div>
-
-                    <div>
-                        <ColumnChart />
-                    </div>
-
                     </div>
                 </div>
             </section>

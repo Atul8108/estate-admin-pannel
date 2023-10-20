@@ -1,15 +1,15 @@
-:root{
-    --color-bg: #ffffff;
-  }
-  
   [data-theme="light"] {
+    --color-bg: #ffffff;
     --white-color: #FCFCFC;
     --secondary-color:#DADEFA;
+    --bg-color:#F4F4F4;
     }
     
     [data-theme="dark"] {
-        --second-color-dark: #6F767E;
-        --divider-color-dark: #272B30;
+      --white-color:#1A1D1F;
+      --text-color-dark: #EFEFEF;
+      --bg-color:#111315;
+      --Text-color-dark:#EFEFEF;
     }
   .switch {
       display: block;

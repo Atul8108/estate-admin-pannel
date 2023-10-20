@@ -7,7 +7,7 @@ const ColumnChart = () => {
             <div className='d-flex'>
                 <Chart type='bar'
                     height={400}
-                    width={500}
+                    width={800}
                     series={[{
                         name: "sales",
                         data: [{
@@ -66,6 +66,25 @@ const ColumnChart = () => {
                     }]}
                     options={{
                         title: { text: "Total Revenue" },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        legend: {
+                            show: false
+                        },
+                        grid: {
+                            show: false,
+                            xaxis: {
+                                lines: {
+                                    show: false
+                                }
+                            },
+                            yaxis: {
+                                lines: {
+                                    show: false
+                                }
+                            },
+                        },
                     }}>
             </Chart>
         </div >

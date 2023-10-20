@@ -1,22 +1,23 @@
 .side-menu-bar {
-    min-height: 100vh;
-    min-width: 270px;
-    width: 270px;
-    background-color: var(--white-color);
-  }
-  .logo {
-    padding: 10px;
-  }
-  
-  .side-menu-bar .menu-items {
-    margin-top: 20px;
-  }
-  .nav_item {
-    text-decoration: none;
-    color: var(--second-text-color);
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  min-height: 100vh;
+  min-width: 270px;
+  width: 270px;
+  background-color: var(--white-color);
+}
 
-  }
+.logo {
+  padding: 10px;
+}
+
+.side-menu-bar .menu-items {
+  margin-top: 20px;
+}
+
+.nav_item {
+  text-decoration: none;
+  color: var(--second-text-color);
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

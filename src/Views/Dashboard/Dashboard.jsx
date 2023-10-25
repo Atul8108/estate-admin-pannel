@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import "./Dashboard.css";
 import ColumnChart from "../../components/Chart/ColumnChart";
 import ProgressBar from "../../components/Chart/ProgressBar";
 import LineProgress from "../../components/Chart/LineProgress";
+import PropertyList from "../../components/PropertyList/PropertyList";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 const Dashboard = () => {
+  const [category, setCategory] = useState()
+
+  function handleSelect(e) {
+    setCategory(e);
+  }
+
   return (
     <>
       <section className="main-layout">
@@ -73,6 +81,40 @@ const Dashboard = () => {
                 <div className="column-chart-conatiner">
                   <LineProgress />
                 </div>
+              </div>
+            </div>
+            <div className="property-list-container">
+              <div className="property-list-filter-btn">
+                <div className="left-content">
+                  <p>Property List</p>
+                </div>
+                <div className="right-content">
+                  <button type="button" className="btn btn-primary m-0">Popular</button>
+                  <button type="button" className="btn btn-primary m-0">Recommended</button>
+                  <button type="button" className="btn btn-primary m-0">Newest</button>
+                  <DropdownButton
+                    alignright="true"
+                    title={category ?? "Most Recent"}
+                    id="dropdown-menu-align-left"
+                    onSelect={(e) => {
+                      handleSelect(e);
+                    }}
+                    style={{ color: "var(--Text-color-dark)" }}
+                  >
+                    <Dropdown.Item id="dropdown-menu-align-left" eventKey="ALL">
+                      All
+                    </Dropdown.Item>
+                    <Dropdown.Item id="dropdown-menu-align-left" eventKey="Most Recent">
+                      Most Recent
+                    </Dropdown.Item>
+                    <Dropdown.Item id="dropdown-menu-align-left" eventKey="One Week">
+                      One Week
+                    </Dropdown.Item>
+                  </DropdownButton>
+                </div>
+              </div>
+              <div className="view-property-container">
+                <PropertyList/>
               </div>
             </div>
           </div>

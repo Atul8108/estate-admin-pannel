@@ -4,11 +4,11 @@ import Chart from "react-apexcharts";
 const ColumnChart = () => {
   return (
     <>
-      <div className="d-flex">
+      <div style={{ width: '100%'}}>
         <Chart
           type="bar"
           height={550}
-          width={1400}
+          width='100%'
           series={[
             {
               name: "sales",
@@ -87,7 +87,6 @@ const ColumnChart = () => {
           ]}
           options={{
             title: { text: "Total Revenue" },
-            width: "100%",
             dataLabels: {
               enabled: false,
             },
@@ -107,8 +106,14 @@ const ColumnChart = () => {
                 },
               },
             },
+            plotOptions: {
+              bar: {
+                columnWidth: "60%",
+              },
+            },
             chart: {
               redrawOnParentResize: true,
+              redrawOnWindowResize: true
             },
           }}
         ></Chart>

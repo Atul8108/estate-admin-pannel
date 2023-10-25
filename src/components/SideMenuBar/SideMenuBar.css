@@ -21,3 +21,8 @@
   align-items: center;
   gap: 10px;
 }
+
+a.nav_item.active{
+  border-radius: 8px;
+  margin: 10px;
+} 

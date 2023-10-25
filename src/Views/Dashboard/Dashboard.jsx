@@ -11,58 +11,70 @@ const Dashboard = () => {
       <section className="main-layout">
         <Header />
         <div className="page-content">
-          <div className="container property-card-container">
-            <h4 className="mr-4 m-0">Dashboard</h4>
-            <div className="row row-style">
-              <div className="col-sm-3">
-                <div className="property-card">
-                  <div className="property-card-info">
-                    <p>Total Customer</p>
-                    <p>000</p>
+          <div className="page-content-container">
+            <h4>Dashboard</h4>
+            <div className="property-card-container">
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col p-0">
+                    <div className="property-cards">
+                      <div className="property-card-right">
+                        <span>Property for sale</span>
+                        <h3>1,200</h3>
+                      </div>
+                      <div className="property-card-left">
+                        <ProgressBar />
+                      </div>
+                    </div>
                   </div>
-                  <div className="property-card-progressBar">
-                    <ProgressBar />
+                  <div className="col">
+                    <div className="property-cards">
+                      <div className="property-card-right">
+                        <span>Property for sale</span>
+                        <h3>1,200</h3>
+                      </div>
+                      <div className="property-card-left">
+                        <ProgressBar />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="property-card">
-                  <div className="property-card-info">
-                    <p>Total Customer</p>
-                    <p>000</p>
+                  <div className="col">
+                    <div className="property-cards">
+                      <div className="property-card-right">
+                        <span>Property for sale</span>
+                        <h3>1,200</h3>
+                      </div>
+                      <div className="property-card-left">
+                        <ProgressBar />
+                      </div>
+                    </div>
                   </div>
-                  <div className="property-card-progressBar">
-                    <ProgressBar />
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="property-card">
-                  <div className="property-card-info">
-                    <p>Total Customer</p>
-                    <p>000</p>
-                  </div>
-                  <div className="property-card-progressBar">
-                    <ProgressBar />
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-3">
-                <div className="property-card">
-                  <div className="property-card-info">
-                    <p>Total Customer</p>
-                    <p>000</p>
-                  </div>
-                  <div className="property-card-progressBar">
-                    <ProgressBar />
+                  <div className="col">
+                    <div className="property-cards">
+                      <div className="property-card-right">
+                        <span>Property for sale</span>
+                        <h3>1,200</h3>
+                      </div>
+                      <div className="property-card-left">
+                        <ProgressBar />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bar-chart">
-              <ColumnChart />
+            <div className="row">
+              <div className="col-8">
+                <div className="column-chart-conatiner">
+                  <ColumnChart />
+                </div>
+              </div>
+              <div className="col-4">
+                <div className="column-chart-conatiner">
+                  <LineProgress />
+                </div>
+              </div>
             </div>
-            <div>{/* <LineProgress /> */}</div>
           </div>
         </div>
       </section>

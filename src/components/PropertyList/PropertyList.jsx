@@ -72,9 +72,6 @@ const PropertyList = () => {
                         <p>Star</p>
                     </div>
                 </div>
-                
-                
-                
             </Carousel>
         </>
     )

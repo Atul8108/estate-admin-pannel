@@ -24,7 +24,7 @@ const ProgressBar = ({ series }) => {
               ],
             },
             colors: [
-              "var(--secondary-color-three)",
+              "var(--secondary-color-three ,--primary-color)",
               "var(--second-text-color)",
             ],
             dataLabels: {

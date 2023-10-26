@@ -8,7 +8,7 @@ import PropertyList from "../../components/PropertyList/PropertyList";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
 const Dashboard = () => {
-  const [category, setCategory] = useState()
+  const [category, setCategory] = useState();
 
   function handleSelect(e) {
     setCategory(e);
@@ -89,9 +89,15 @@ const Dashboard = () => {
                   <p>Property List</p>
                 </div>
                 <div className="right-content">
-                  <button type="button" className="btn btn-primary m-0">Popular</button>
-                  <button type="button" className="btn btn-primary m-0">Recommended</button>
-                  <button type="button" className="btn btn-primary m-0">Newest</button>
+                  <button type="button" className="btn btn-primary m-0">
+                    Popular
+                  </button>
+                  <button type="button" className="btn btn-primary m-0">
+                    Recommended
+                  </button>
+                  <button type="button" className="btn btn-primary m-0">
+                    Newest
+                  </button>
                   <DropdownButton
                     alignright="true"
                     title={category ?? "Most Recent"}
@@ -104,17 +110,23 @@ const Dashboard = () => {
                     <Dropdown.Item id="dropdown-menu-align-left" eventKey="ALL">
                       All
                     </Dropdown.Item>
-                    <Dropdown.Item id="dropdown-menu-align-left" eventKey="Most Recent">
+                    <Dropdown.Item
+                      id="dropdown-menu-align-left"
+                      eventKey="Most Recent"
+                    >
                       Most Recent
                     </Dropdown.Item>
-                    <Dropdown.Item id="dropdown-menu-align-left" eventKey="One Week">
+                    <Dropdown.Item
+                      id="dropdown-menu-align-left"
+                      eventKey="One Week"
+                    >
                       One Week
                     </Dropdown.Item>
                   </DropdownButton>
                 </div>
               </div>
               <div className="view-property-container">
-                <PropertyList/>
+                {/* <PropertyList/> */}
               </div>
             </div>
           </div>

@@ -2,30 +2,117 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import "./Property.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
-
+import axios from "axios";
 
 const Property = () => {
   const [category, setCategory] = useState();
-//   useEffect(() => {
-//     const url = "https://mightyzeus.housing.com/api/gql?apiName=GET_AUDIENCE_MAXIMIZER_PROPERTIES&emittedFrom=client_buy_home&isBot=false&platform=desktop&source=web&source_name=AudienceWeb";
+  const [data, setData] = useState(null);
 
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(url);
-//         const json = await response.json();
-//         console.log(json);
-//       } catch (error) {
-//         console.log("error", error);
-//       }
-//     };
+  useEffect(() => {
+    const apiUrl = "/api";
 
-//     fetchData();
-// }, []);
+    const graphqlQuery = {
+      query: `
+        fragment PR on Property {
+          coverImage {
+            src
+            alt
+            videoUrl
+          }
+          propertyType
+          listingId
+          title
+          subtitle
+          isActiveProperty
+          displayPrice {
+            value
+            displayValue
+            unit
+            deposit
+          }
+          address {
+            address
+            url
+            detailedPropertyAddress {
+              url
+              val
+            }
+            distanceFromEntity
+          }
+          url
+          promotions
+          coords
+          tags
+          meta
+          brands {
+            name
+          }
+          sellers {
+            ...BS
+            phone {
+              partialValue
+            }
+          }
+        }
+        fragment BS on User {
+          name
+          id
+          image
+          firmName
+          url
+          type
+          isPrime
+          isPaid
+          designation
+        }
+        query(
+          $cityId: String
+          $poly: String
+          $visitedPolygons: [String]
+          $visitedProjects: [String]
+        ) {
+          audienceMaximizerProperties(
+            cityId: $cityId
+            poly: $poly
+            visitedPolygons: $visitedPolygons
+            visitedProjects: $visitedProjects
+          ) {
+            totalCount
+            properties {
+              ...PR
+              updatedAt
+              socialUrgency {
+                msg
+              }
+              socialContext {
+                msg
+              }
+            }
+          }
+        }
+      `,
+      variables: {
+        cityId: "90d5af399d7256af0694",
+        poly: "cfd49c20e16ab8f21a81",
+        visitedPolygons: [],
+        visitedProjects: [],
+      },
+    };
+
+    axios
+      .post(apiUrl, graphqlQuery)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  console.log(data);
   function handleSelect(e) {
     setCategory(e);
   }
-
-
 
   return (
     <>
@@ -124,27 +211,41 @@ const Property = () => {
               <div className="property-item">
                 <div className="row">
                   <div className="col">
-                    {/* <div className="row" style={{ height: "90vh", overflowY: 'scroll' }}>
-                      {
-                        property?.map((item, index) => {
+                    <div
+                      className="row"
+                      style={{ height: "90vh", overflowY: "scroll" }}
+                    >
+                      {data.data.audienceMaximizerProperties.properties.map(
+                        (item, index) => {
                           return (
                             <div className="col-md-6">
                               <div className="team-card">
                                 <div className="right-info">
-                                  <img src={item?.image} alt={index} style={{ width: "100%", maxWidth: "250px", minWidth: "50px", height: "100%", objectFit: "cover", borderRadius: "10px" }} />
+                                  <img
+                                    src={item?.title}
+                                    alt={index}
+                                    style={{
+                                      width: "100%",
+                                      maxWidth: "250px",
+                                      minWidth: "50px",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                      borderRadius: "10px",
+                                    }}
+                                  />
                                 </div>
                                 <div className="left-info">
-                                  <p>{item?.cost}</p>
+                                  <p>{item?.title}</p>
                                   <p>{item?.name}</p>
                                   <p>{item?.location}</p>
                                   <p>{item?.numberOfBeds}</p>
                                 </div>
                               </div>
                             </div>
-                          )
-                        })
-                      }
-                    </div> */}
+                          );
+                        }
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
